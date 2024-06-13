@@ -1,0 +1,243 @@
+{% extends './base.html' %}
+{% block content %}
+      <!-- Modal -->
+      <div class="modal fade lug" id="myModal" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Change</h4>
+               </div>
+               
+            
+            </div>
+         </div>
+      </div>
+      <div id="sidebar" class="top-nav">
+         <ul id="sidebar-nav" class="sidebar-nav">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Chamb for Business</a></li>
+         </ul>
+      </div>
+      <br>
+      <div class="product-page-main">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-2 col-sm-4">
+                
+               </div> 
+               <div class="col-md-7 col-sm-8">
+                  <div class="md-prod-page">
+                     <div class="md-prod-page-in">
+                        <div class="page-preview">
+                           <div class="preview">
+                              <div class="preview-pic tab-content">
+                                 <div class="tab-pane active" id="pic-1"><img src="{{query.product_image.url}}" alt="#" /></div>
+                                 
+                              </div>
+                              
+                              
+                           </div>
+                        </div>
+                        <div class="btn-dit-list clearfix">
+                           <div class="left-dit-p">
+                              <div class="prod-btn">
+                                 <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Save to wishlist</a>
+                                 <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like this</a>
+                                 <p>23 likes</p>
+                              </div>
+                           </div>
+                           <div class="right-dit-p">
+                              <div class="like-list">
+                                 <ul>
+                                    <li>
+                                       <div class="im-b"><img class="" src="images/list-img-01.png" alt=""></div>
+                                    </li>
+                                    <li>
+                                       <div class="im-b"><img src="images/list-img-02.png" alt=""></div>
+                                    </li>
+                                    <li>
+                                       <div class="im-b"><img src="images/list-img-03.png" alt=""></div>
+                                    </li>
+                                    <li>
+                                       <div class="im-b"><img src="images/list-img-04.png" alt=""></div>
+                                    </li>
+                                    <li>
+                                       <div class="im-b"><img src="images/list-img-05.png" alt=""></div>
+                                    </li>
+                                    <li>
+                                       <div class="im-b"><img src="images/list-img-06.png" alt=""></div>
+                                    </li>
+                                    <li>
+                                       <div class="im-b"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="description-box">
+                        <div class="dex-a">
+                           <h4>Description</h4>
+                           <p>{{query.product_description}}
+                           </p>
+                           <br>
+                           
+                        </div>
+                        <div class="spe-a">
+                           <h4>Specifications</h4>
+                           <ul>
+
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Product Name</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{query.product_name}}</p>
+                                 </div>
+                              </li>
+
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Product Price</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{query.product_price}}</p>
+                                 </div>
+                              </li>
+
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Product Category</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{query.product_category.category}}</p>
+                                 </div>
+                              </li>
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Product Owner</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{query.product_owner.owner_name}}</p>
+                                 </div>
+                              </li>
+
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Owner Contact</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{query.product_owner.owner_contact}}</p>
+                                 </div>
+                              </li>
+
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Owner Email</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{query.product_owner.owner_email}}</p>
+                                 </div>
+                              </li>
+                           </ul>
+                           <hr>
+                           <h4>Transaction Detail</h4>
+                           <ul>
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Bank Transfer</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p><span>Bank Name: </span>{{query.product_owner.bank_name}}</p>
+
+                                    <p><span>Account Holder Name: </span>{{query.product_owner.account_holder_name}}</p>
+
+                                    <p><span>Bank Account Number: </span>{{query.product_owner.bank_account_number}}</p>
+                                 </div>
+                              </li>
+                              
+                           </ul>
+                     
+                              <hr>
+                              <h4>Shipping Company details</h4>
+                              
+                              <ul>
+
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Shipping Company Name</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{query.product_shipping.company_name}}</p>
+                                 </div>
+                              </li>
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Shipping Company Contact</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{query.product_shipping.company_contact}}</p>
+                                 </div>
+                              </li>
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Shipping Company Address</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>{{query.product_shipping.company_address}}</p>
+                                 </div>
+                              </li>
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Shipping</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>Shipping worldwide</p>
+                                 </div>
+                              </li>
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Insurance</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>10% Per Product</p>
+                                 </div>
+                              </li>
+                              <li class="clearfix">
+                                 <div class="col-md-4">
+                                    <h5>Delivery</h5>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <p>In 15 Days</p>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                 
+                            
+                              
+                              
+                           
+                        </div>
+                     </div>
+                     
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+
+      {% endblock %}

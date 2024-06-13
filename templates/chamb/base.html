@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>FYP Import Export</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!--enable mobile device-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--fontawesome css-->
+      <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+      <!--bootstrap css-->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <!--animate css-->
+      <link rel="stylesheet" href="{% static 'css/animate-wow.css' %}">
+      <!--main css-->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/bootstrap-select.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/slick.min.css' %}">
+      <!--responsive css-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+      <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+   </head>
+   <body>
+      <header id="header" class="top-head">
+         <!-- Static navbar -->
+         <nav class="navbar navbar-default">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-4 col-sm-12 left-rs">
+                     <div class="navbar-header">
+                        <button type="button" id="top-menu" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"> 
+                        <span class="sr-only">Toggle navigation</span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        </button>
+                        <a href="/" class="navbar-brand">
+                           <h3 style="font-size: 30px; width: 60px;"><b>FYP</b></h3>
+                        </a>
+                     </div>
+                     <form class="navbar-form navbar-left web-sh">
+                        <div class="form">
+                           <input type="text" class="form-control" placeholder="Search for products or companies">
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-md-8 col-sm-12">
+                     <div class="right-nav">
+                        <div class="login-sr">
+                           <div class="login-signup">
+                              {% if request.user.is_authenticated %}
+                              <ul>
+                                 <li><a href="#"> Hi! {{request.user.username}}</a></li>
+                                 <li><a class="custom-b" href="/user-logout">Logout</a></li>
+                              </ul>
+                              {% else %}
+                              <ul>
+                                 <li><a href="/user-login">Login</a></li>
+                                 <li><a class="custom-b" href="/user-signup">Sign up</a></li>
+                              </ul>
+                              {% endif %}
+                           </div>
+                        </div>
+                        <div class="help-r hidden-xs">
+                           <div class="help-box">
+                              <ul>
+                                 <li> <a data-toggle="modal" href="#"> <span>Trade Location</span> <img style='width: 20px; height: 20px;' src="{% static 'images/pak.png' %}" alt="" /> </a> </li>
+                                 <li> <a href="/about-us"> About Us </a> </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="nav-b hidden-xs">
+                           <div class="nav-box">
+                              <ul>
+                                 <li><a href="/">Home</a></li>
+                                 <li><a href="/contact-us">Contact Us</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--/.container-fluid --> 
+         </nav>
+      </header>
+
+      {% block content %}
+
+      {% endblock %}
+      <footer>
+         <div class="main-footer">
+            <div class="container">
+               <div class="row">
+                  
+                  <div class="footer-link-box clearfix">
+                     <div class="col-md-6 col-sm-6">
+                        <div class="left-f-box">
+                           <div class="col-sm-4">
+                              <h2>SELL ON FYP</h2>
+                              <ul>
+                                 <li><a href="/user-signup">Create account</a></li>
+                                 <li><a href="/about-us">How it works suppliers</a></li>
+                                 <li><a href="#">Pricing</a></li>
+                                 <li><a href="#">FAQ for Suppliers</a></li>
+                              </ul>
+                           </div>
+                           <div class="col-sm-4">
+                              <h2>BUY ON FYP</h2>
+                              <ul>
+                                 <li><a href="/user-signup">Create account</a></li>
+                                 <li><a href="/about-us">How it works buyers</a></li>
+                                 <li><a href="#">Categories</a></li>
+                                 <li><a href="#">FAQ for buyers</a></li>
+                              </ul>
+                           </div>
+                           <div class="col-sm-4">
+                              <h2>COMPANY</h2>
+                              <ul>
+                                 <li><a href="/about-us">About FYP</a></li>
+                                 <li><a href="/contact-us">Contact us</a></li>
+                                 <li><a href="#">Press</a></li>
+                                 <li><a href="#">Careers</a></li>
+                                 <li><a href="#">Terms of use</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6 col-sm-6">
+                        <div class="right-f-box">
+                           <h2>INDUSTRIES</h2>
+                           <ul class="col-sm-4">
+                              <li><a href="#">Textiles</a></li>
+                              <li><a href="#">Furniture</a></li>
+                              <li><a href="#">Leather</a></li>
+                              <li><a href="#">Agriculture</a></li>
+                              <li><a href="#">Food & drinks</a></li>
+                           </ul>
+                           <ul class="col-sm-4">
+                              <li><a href="#">Office</a></li>
+                              <li><a href="#">Decoratives</a></li>
+                              <li><a href="#">Electronics</a></li>
+                              <li><a href="#">Machines</a></li>
+                              <li><a href="#">Building</a></li>
+                           </ul>
+                           <ul class="col-sm-4">
+                              <li><a href="#">Cosmetics</a></li>
+                              <li><a href="#">Health</a></li>
+                              <li><a href="#">Jewelry</a></li>
+                              <li><a href="#">See all here</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8">
+                     <p> All Rights Reserved. FYP Import Export © 2024</p>
+                  </div>
+                  <div class="col-md-4">
+                     <ul class="list-inline socials">
+                        <li>
+                           <a href="">
+                           <i class="fa fa-facebook" aria-hidden="true"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="">
+                           <i class="fa fa-twitter" aria-hidden="true"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="">
+                           <i class="fa fa-instagram" aria-hidden="true"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-linkedin" aria-hidden="true"></i>
+                           </a>
+                        </li>
+                     </ul>
+                     <ul class="right-flag">
+                        <li><a href="#"><img src="images/flag.png" alt="" /> <</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!--main js--> 
+      <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script> 
+      <!--bootstrap js--> 
+      <script src="{% static 'js/bootstrap.min.js' %}"></script> 
+      <script src="{% static 'js/bootstrap-select.min.js' %}"></script>
+      <script src="{% static 'js/slick.min.js' %}"></script> 
+      <script src="{% static 'js/wow.min.js' %}"></script>
+      <!--custom js--> 
+      <script src="{% static 'js/custom.js' %}"></script>
+      <script src="{% static 'js/contact.js' %}"></script>
+   </body>
+</html>

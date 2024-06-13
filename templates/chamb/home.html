@@ -1,0 +1,87 @@
+{% extends "./base.html" %}
+
+{% block content %}
+<!-- Modal -->
+      
+      <div id="sidebar" class="top-nav">
+         <ul id="sidebar-nav" class="sidebar-nav">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">chamb for Business</a></li>
+         </ul>
+      </div>
+      <div class="page-content-product">
+         <div class="main-product">
+            <div class="container">
+               <div class="row clearfix">
+                  <div class="find-box">
+                     <h1>Find your Import or<br>Export partner here.</h1>
+                     <h4> get inspired!</h4>
+                     
+               </div>
+               {% for product in products %}
+               <div class="row clearfix">
+                  <div class="col-lg-3 col-sm-6 col-md-3">
+                     <a href="product/{{product.id}}/">
+                        <div class="box-img">
+                           <h4>{{product.product_name}}</h4>
+                           <img src="{{product.product_image.url}}" alt="" style="width: 260px; height: 140px;" />
+                        </div>
+                     </a>
+                  </div>
+                  {% endfor %}
+                  
+                  <div class="categories_link">
+                     <a href="#">Browse all categories here</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="cat-main-box">
+         <div class="container">
+            <div class="row panel-row">
+               <div class="col-md-4 col-sm-6 wow fadeIn" data-wow-delay="0.0s">
+                  <div class="panel panel-default">
+                     <div class="panel-body">
+                        <img src="images/xpann-icon.jpg" class="icon-small" alt="">
+                        <h4>“Global Commerce”</h4>
+                        <p>Trade between nations fosters economic growth, and Import Export is the Life Line of global Commerce.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                  <div class="panel panel-default">
+                     <div class="panel-body">
+                        <img src="images/create-icon.jpg" class="icon-small" alt="">
+                        <h4>Import-Export</h4>
+                        <p>In the realm of International Business, Import-Export acts as a bridge, connecting diverse markets and opportunities.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-6 wow fadeIn hidden-sm" data-wow-delay="0.4s">
+                  <div class="panel panel-default">
+                     <div class="panel-body">
+                        <img src="images/get-icon.jpg" class="icon-small" alt="">
+                        <h4>Get inspired</h4>
+                        <p>Efficient import export practices turn borders into gateways, enhanceing both cultural exchange and economic prosperity.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+            
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endblock %}
